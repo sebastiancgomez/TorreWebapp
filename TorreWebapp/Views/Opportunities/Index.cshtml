@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<form asp-controller="Opportunities" asp-action="Results" method="get">
+    <p>
+        Skill/Role: <input type="text" name="skill" />
+        Orgnanization: <input type="text" name="organization" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
