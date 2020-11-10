@@ -40,37 +40,37 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.objective)
-                </td>
-                <td>
-                    <ul>
-                        @foreach (var org in item.organizations)
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.objective)
+            </td>
+            <td>
+                <ul>
+                    @foreach (var org in item.organizations)
                         {
-                            <li>@org.name</li>
+                    <li>@org.name</li>
                         }
-                    </ul>
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.type)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.remote)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.external)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.deadline)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.status)
-                </td>
-                <td>
-                    @Html.ActionLink("Details", "Details", new { id = item.id })
-                </td>
-            </tr>
+                </ul>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.external)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.deadline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.id })
+            </td>
+        </tr>
         }
     </tbody>
 </table>

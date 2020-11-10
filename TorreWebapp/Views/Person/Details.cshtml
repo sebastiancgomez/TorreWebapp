@@ -125,118 +125,118 @@
         <div id="experiences" style="display:none;">
             @if (!(Model == null) && !(Model.experiences == null))
             {
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                Category
-                            </th>
-                            <th>
-                                Name
-                            </th>
-                            <th>
-                                Organizations
-                            </th>
-                            <th>
-                                Organizations Images
-                            </th>
-                            <th>
-                                From Month
-                            </th>
-                            <th>
-                                From Year
-                            </th>
-                            <th>
-                                To Month
-                            </th>
-                            <th>
-                                To Year
-                            </th>
-                            <th>
-                                Responsabilities
-                            </th>
-                            <th>
-                                High lighted
-                            </th>
-                            <th>
-                                Weight
-                            </th>
-                            <th>
-                                Verifications
-                            </th>
-                            <th>
-                                Recommendations
-                            </th>
-                            <th>
-                                Rank
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.experiences)
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Category
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Organizations
+                        </th>
+                        <th>
+                            Organizations Images
+                        </th>
+                        <th>
+                            From Month
+                        </th>
+                        <th>
+                            From Year
+                        </th>
+                        <th>
+                            To Month
+                        </th>
+                        <th>
+                            To Year
+                        </th>
+                        <th>
+                            Responsabilities
+                        </th>
+                        <th>
+                            High lighted
+                        </th>
+                        <th>
+                            Weight
+                        </th>
+                        <th>
+                            Verifications
+                        </th>
+                        <th>
+                            Recommendations
+                        </th>
+                        <th>
+                            Rank
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.experiences)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.category)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.name)
-                                </td>
-                                <td>
-                                    <ul>
-                                        @foreach (var org in item.organizations)
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.category)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name)
+                        </td>
+                        <td>
+                            <ul>
+                                @foreach (var org in item.organizations)
                                         {
-                                            <li>@org.name</li>
+                                <li>@org.name</li>
                                         }
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        @foreach (var org in item.organizations)
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                @foreach (var org in item.organizations)
                                         {
-                                            <img src="@org.picture" alt="@org.name" />
+                                <img src="@org.picture" alt="@org.name" />
                                         }
-                                    </ul>
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.fromMonth)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.fromYear)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.toMonth)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.toYear)
-                                </td>
-                                <td>
-                                    <ul>
-                                        @foreach (var res in item.responsibilities)
+                            </ul>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fromMonth)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fromYear)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.toMonth)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.toYear)
+                        </td>
+                        <td>
+                            <ul>
+                                @foreach (var res in item.responsibilities)
                                         {
-                                            <li>@res</li>
+                                <li>@res</li>
                                         }
-                                    </ul>
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.highlighted)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.weight)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.verifications)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.recommendations)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.rank)
-                                </td>
-                            </tr>
+                            </ul>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.highlighted)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.weight)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.verifications)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.recommendations)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.rank)
+                        </td>
+                    </tr>
                         }
-                    </tbody>
-                </table>
+                </tbody>
+            </table>
             }
         </div>
     </div>
@@ -247,51 +247,51 @@
         <div id="strength" style="display:none;">
             @if (!(Model == null) && !(Model.strengths == null))
             {
-                <table class="table">
-                    <thead>
-                        <tr>
+            <table class="table">
+                <thead>
+                    <tr>
 
-                            <th>
-                                Code
-                            </th>
-                            <th>
-                                Name
-                            </th>
-                            <th>
-                                Additional Info
-                            </th>
-                            <th>
-                                Weight
-                            </th>
-                            <th>
-                                Recommendations
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.strengths)
+                        <th>
+                            Code
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Additional Info
+                        </th>
+                        <th>
+                            Weight
+                        </th>
+                        <th>
+                            Recommendations
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.strengths)
                         {
-                            <tr>
+                    <tr>
 
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.code)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.name)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.additionalInfo)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.weight)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.recommendations)
-                                </td>
-                            </tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.code)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.additionalInfo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.weight)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.recommendations)
+                        </td>
+                    </tr>
                         }
-                    </tbody>
-                </table>
+                </tbody>
+            </table>
             }
         </div>
     </div>
@@ -302,36 +302,34 @@
         <div id="languages" style="display:none;">
             @if (!(Model == null) && !(Model.languages == null))
             {
-                <table class="table">
-                    <thead>
-                        <tr>
+            <table class="table">
+                <thead>
+                    <tr>
 
-                            <th>
-                                Language
-                            </th>
-                            <th>
-                                Fluency
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model.languages)
+                        <th>
+                            Language
+                        </th>
+                        <th>
+                            Fluency
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.languages)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.language)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.fluency)
-                                </td>
-                            </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.language)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fluency)
+                        </td>
+                    </tr>
                         }
-                    </tbody>
-                </table>
+                </tbody>
+            </table>
             }
         </div>
     </div>
-
+    <hr />
 </div>
-
-
