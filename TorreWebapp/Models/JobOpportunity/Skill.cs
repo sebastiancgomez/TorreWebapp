@@ -10,5 +10,6 @@ namespace TorreWebapp.Models.JobOpportunity
         public string name { get; set; }
         public string experience { get; set; }
         public string text { get; set; }
+        public double weight { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace TorreWebapp.Models
         public DateTime created { get; set; }
         public bool verified { get; set; }
         public Flags flags { get; set; }
-        public int weight { get; set; }
+        public double weight { get; set; }
         public string locale { get; set; }
         public string subjectId { get; set; }
         public string picture { get; set; }
@@ -29,15 +29,4 @@ namespace TorreWebapp.Models
         public string weightGraph { get; set; }
         public string publicId { get; set; }
     }
-   
-
-   
-
-  
-
-   
-
-    
-
-
 }

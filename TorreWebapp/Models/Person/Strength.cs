@@ -11,7 +11,7 @@ namespace TorreWebapp.Models
         public int code { get; set; }
         public string name { get; set; }
         public string additionalInfo { get; set; }
-        public int weight { get; set; }
+        public double weight { get; set; }
         public int recommendations { get; set; }
         public List<object> media { get; set; }
         public DateTime created { get; set; }

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<TorreWebapp.Models.Result>
+
+@{
+    ViewData["Title"] = "Results";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Results</h1>
+
+<a asp-action="Index">Back to Search</a>
+
+@Html.ValidationMessage("CustomError")
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.picture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.remoter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.skills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.compensations)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.picture)" alt="@Html.DisplayFor(modelItem => item.name)" width="100" height="80">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.remoter)
+                </td>
+                <td>
+                    <ul>
+                        @foreach (var org in item.skills)
+                        {
+                            <li>@org.name</li>
+                        }
+                    </ul>
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.username)
+                </td>
+                <td>
+                    @Html.Raw(@item.compensations.compensation)
+
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { userName = item.username })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Index">Back to Search</a>

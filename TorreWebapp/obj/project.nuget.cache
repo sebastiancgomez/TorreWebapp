@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dqIMFbCWWWHby3A+yEnO+gCKOtpqbSk7CCGEbhEVNtGI3l4SZO+AFupLBaMdpLzb3qKSB/OOpAmTwC6sVAwNRQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\remoto\\Desktop\\Torre\\TorreWebapp\\TorreWebapp\\TorreWebapp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\remoto\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

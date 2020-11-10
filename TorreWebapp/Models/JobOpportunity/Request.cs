@@ -11,6 +11,12 @@ namespace TorreWebapp.Models.JobOpportunity
         [JsonProperty("skill/role")]
         public Skill skill { get; set; }
         public Organization organization { get; set; }
+        public Name name { get;set;}
+    }
+
+    public class Name
+    {
+        public string term { get; set; }
     }
 }
 

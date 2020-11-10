@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Internal;
 using Newtonsoft.Json;
 using TorreWebapp.Models.JobOpportunity;
 
@@ -41,7 +40,7 @@ namespace TorreWebapp.Controllers
                         org.term = organization;
                         search.organization = org;
                     }
-                    request.Content = new StringContent(JsonConvert.SerializeObject(search), Encoding.UTF8, "application/json");
+                    request.Content = new StringContent("{\"and\":[" + JsonConvert.SerializeObject(search)+"]}", Encoding.UTF8, "application/json");
 
 
                     var response = httpClient.SendAsync(request);
@@ -60,7 +59,8 @@ namespace TorreWebapp.Controllers
 
                         results = new List<Result>();
 
-                        ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                        ModelState.AddModelError("CustomError", "Server error. Please contact administrator.");
+                        return View("Index");
                     }
 
 
@@ -95,7 +95,7 @@ namespace TorreWebapp.Controllers
 
                     job = new JobDetail();
 
-                    ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                    ModelState.AddModelError("CustomError", "Server error. Please contact administrator.");
                 }
             }
             return View(job);

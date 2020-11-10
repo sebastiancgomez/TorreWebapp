@@ -8,8 +8,9 @@
 
 <form asp-controller="Opportunities" asp-action="Results" method="get">
     <p>
-        Skill/Role: <input type="text" name="skill" />
+        Skill/Role: <input type="text" name="skill" />(and)
         Orgnanization: <input type="text" name="organization" />
         <input type="submit" value="Filter" />
+        @Html.ValidationMessage("CustomError")
     </p>
 </form>

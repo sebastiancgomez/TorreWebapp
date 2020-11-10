@@ -8,7 +8,7 @@ namespace TorreWebapp.Models.JobOpportunity
     public class JobDetail
     {
         public List<Attachment> attachments { get; set; }
-        public int boardVersion { get; set; }
+        public double boardVersion { get; set; }
         public PrefilledStatus prefilledStatus { get; set; }
         public string locale { get; set; }
         public string objective { get; set; }

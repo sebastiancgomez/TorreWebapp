@@ -16,7 +16,7 @@ namespace TorreWebapp.Models.JobOpportunity
         public string pictureThumbnail { get; set; }
         public bool hasBio { get; set; }
         public double bioCompletion { get; set; }
-        public int weight { get; set; }
+        public double weight { get; set; }
         public bool verified { get; set; }
         public int subjectId { get; set; }
     }

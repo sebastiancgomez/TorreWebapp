@@ -7,9 +7,9 @@
 
 <h1>Results</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<a asp-action="Index">Back to Search</a>
+
+@Html.ValidationMessage("CustomError")
 <table class="table">
     <thead>
         <tr>
@@ -40,37 +40,37 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.objective)
-            </td>
-            <td>
-                <ul>
-                    @foreach (var org in item.organizations)
-                    {
-                        <li>@org.name</li>
-                    }
-                </ul>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.remote)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.external)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.deadline)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.status)
-            </td>
-            <td>
-                @Html.ActionLink("Details", "Details", new { id = item.id })
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.objective)
+                </td>
+                <td>
+                    <ul>
+                        @foreach (var org in item.organizations)
+                        {
+                            <li>@org.name</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.remote)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.external)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.deadline)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.id })
+                </td>
+            </tr>
         }
     </tbody>
 </table>
